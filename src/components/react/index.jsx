@@ -10,18 +10,6 @@ class Index extends React.Component {
     this.state = { name: "a", email: "" };
   }
 
-  onFormSubmit = (event) => {
-    event.preventDefault();
-  };
-
-  onNameChangeHandler = (event) => {
-    this.setState({ name: event.target.value });
-  };
-
-  onEmailChangeHandler = (event) => {
-    this.setState({ email: event.target.value });
-  };
-
   render() {
     return (
       <div>
