@@ -1,6 +1,5 @@
 import React from "react";
 import { TopMenu } from "./TopMenu";
-import { ImagesSlider } from "./ImagesSlider";
 import { OurProduct } from './OurProduct';
 import { Introduction } from "./Introduction";
 
