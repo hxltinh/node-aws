@@ -1,13 +1,13 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import { Paper } from "@material-ui/core";
-import { makeStyles } from '@material-ui/styles'; 
+import { makeStyles,  } from "@material-ui/styles";
 
-const useStyles = makeStyles({
-    img: {
-        width: '100%',
-    }
-  });
+const useStyles = makeStyles(theme => ({
+  img: {
+    width: "100%",
+  },
+}));
 
 const items = [
   {
@@ -33,9 +33,10 @@ const items = [
 ];
 
 export const OurProduct = () => {
+
   return (
-    <>
-        <p>Our product and this and that</p>
+    <div className="gb-padding">
+      <p>Our product and this and that</p>
       <Grid container spacing={3}>
         {items.map((item) => (
           <Grid item xs={3}>
@@ -43,12 +44,12 @@ export const OurProduct = () => {
           </Grid>
         ))}
       </Grid>
-    </>
+    </div>
   );
 };
 
 function Item(props) {
-    const style = useStyles();
+  const style = useStyles();
   return (
     <Paper>
       <p>{props.item.title}</p>

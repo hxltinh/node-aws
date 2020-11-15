@@ -1,6 +1,16 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
 import { Paper } from "@material-ui/core";
+import { makeStyles } from "@material-ui/styles";
+
+const useStyles = makeStyles({
+  page: {
+    height: 600,
+  },
+  img: {
+    width: "100%",
+  },
+});
 
 const items = [
   {
@@ -26,10 +36,11 @@ export const ImagesSlider = (props) => {
 };
 
 function Item(props) {
+  const style = useStyles();
   return (
-    <Paper>
+    <Paper className={style.page}>
       <h2>{props.item.name}</h2>
-      <img src={props.item.imageUrl} />
+      <img className={style.img} src={props.item.imageUrl} />
     </Paper>
   );
 }
