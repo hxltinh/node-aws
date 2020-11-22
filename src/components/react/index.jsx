@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Re } from "react-router-dom";
+import { BrowserRouter, Route, Redirect } from "react-router-dom";
 
 import { TopMenu } from "./TopMenu";
 import { Main } from "./Main";
