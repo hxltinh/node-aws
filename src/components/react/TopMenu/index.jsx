@@ -4,6 +4,9 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
+import { Link } from "react-router-dom";
+
+// should link to RICE MILLING FACILITIES, INTERNATIONAL MARKET,  AWARDS AND CERTIFICATIOS
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -38,6 +41,10 @@ export const TopMenu = () => {
         <div>
           <h3>Website title</h3>
         </div>
+
+        <p>it should link</p>
+        <Link to="/facilities">facilities</Link>
+        
         <div>
           <Button
             aria-controls="simple-menu"

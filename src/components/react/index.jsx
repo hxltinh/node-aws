@@ -1,21 +1,27 @@
 import React from "react";
+import { BrowserRouter, Route, Re } from "react-router-dom";
+
 import { TopMenu } from "./TopMenu";
-import { OurProduct } from './OurProduct';
-import { Introduction } from "./Introduction";
+import { Main } from "./Main";
+import { Facilities } from "./Facilities";
 
 class Index extends React.Component {
-  constructor() {
-    super();
-    this.state = { name: "a", email: "" };
-  }
-
   render() {
     return (
-      <div>
+      <BrowserRouter>
         <TopMenu />
-        <Introduction />
-        <OurProduct />
-      </div>
+        <Route path="/main">
+          <Main />
+        </Route>
+
+        <Route path="/facilities">
+          <Facilities />
+        </Route>
+
+        <Route path="/" exact={true}>
+          <Redirect to={{ pathname: "/main" }} />
+        </Route>
+      </BrowserRouter>
     );
   }
 }

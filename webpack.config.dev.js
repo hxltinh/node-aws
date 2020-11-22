@@ -7,7 +7,8 @@ const config = {
         /// Every pages entry point should be mentioned here
     },
     devServer: {
-        contentBase: path.join(__dirname, 'src/components/react')
+        contentBase: path.join(__dirname, 'src/components/react'),
+        historyApiFallback: true,
       },
     module: {
         rules: [
