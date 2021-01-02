@@ -39,7 +39,6 @@ function Item(props) {
   const style = useStyles();
   return (
     <Paper className={style.page}>
-      <h2>{props.item.name}</h2>
       <img className={style.img} src={props.item.imageUrl} />
     </Paper>
   );
