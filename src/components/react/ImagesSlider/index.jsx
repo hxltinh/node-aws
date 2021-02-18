@@ -8,7 +8,6 @@ const useStyles = makeStyles({
     height: 600,
   },
   img: {
-    width: "100%",
   },
 });
 
