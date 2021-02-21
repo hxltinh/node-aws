@@ -3,62 +3,58 @@ import Grid from "@material-ui/core/Grid";
 import { Paper } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import { Link } from "react-router-dom";
+import { ContentTitle } from "../ContentTitle";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: 0,
-    display: 'flex',
-    flexDirection: 'column',
+    display: "flex",
+    flexDirection: "column",
   },
   img: {
     width: "100%",
   },
-  titleWrapper: {
-    display: 'flex',
-    margin: '15px 0', 
-    justifyContent: 'center',
-  },
-  titleText: {
-    fontSize: '2.875rem',
-    color: 'rgb(51, 153, 255)',
-    padding: '10px 20px',
-    borderBottom: '1px solid grey',
-  },
   oemManufactoring: {
-    display: 'flex',
-    flexDirection: 'row',
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+  },
+  oemManufactoringWrapper: {
+    maxWidth: 1000,
+    flex: 1,
+    display: "flex",
+    flexDirection: "row",
   },
   oemTitle: {
     width: 260,
-    fontSize: '1.5rem',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    textAlign: 'center',
+    fontSize: "1.5rem",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    textAlign: "center",
   },
   oemImage: {
-    display: 'flex',
+    display: "flex",
     flex: 1,
-    justifyContent: 'center',
-    backgroundColor: '#ffffff',
-    
+    justifyContent: "center",
+    backgroundColor: "#ffffff",
   },
   productItem: {
-    position: 'relative',
+    position: "relative",
   },
   productItemTitleWrapper: {
-    position: 'absolute',
+    position: "absolute",
     bottom: 30,
     left: 0,
     right: 0,
   },
   productItemTitle: {
-    position: 'relative',
-    padding: '5px 14px',
-    backgroundColor: 'rgb(255, 255, 255, 0.5)',
-    textAlign: 'center',
+    position: "relative",
+    padding: "5px 14px",
+    backgroundColor: "rgb(255, 255, 255, 0.5)",
+    textAlign: "center",
+    color: "#000000",
   },
-
 }));
 
 export const OurProduct = () => {
@@ -74,14 +70,18 @@ export const OurProduct = () => {
   }, []);
 
   return (
-    <div class="gb-padding">
+    <div className="gb-padding">
       <Grid container spacing={3} className={style.root}>
-        <div className={style.titleWrapper}>
-          <div className={style.titleText}>Our Products</div>
-        </div>
+        <ContentTitle>Our Products</ContentTitle>
         <div className={style.oemManufactoring}>
-          <div className={style.oemTitle}><div>OEM manufacturing</div></div>
-          <div className={style.oemImage}><img src="https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/oem-menufactoring.png"></img></div>
+          <div className={style.oemManufactoringWrapper}>
+            <div className={style.oemTitle}>
+              <div>OEM manufacturing</div>
+            </div>
+            <div className={style.oemImage}>
+              <img src="https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/oem-menufactoring.png"></img>
+            </div>
+          </div>
         </div>
         <div>
           <ProductsList products={products} />

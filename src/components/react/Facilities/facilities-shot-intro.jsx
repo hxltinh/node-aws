@@ -3,6 +3,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/styles";
 import { Button } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
+import { ContentTitle } from "../ContentTitle";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,7 +32,7 @@ export const FacilitiesShortIntro = () => {
 
   return (
     <div className={style.root}>
-      <p>Facilities</p>
+      <ContentTitle>Facilities</ContentTitle>
       <div className={style.imgWrapper}>
         <img
           className={style.img}
