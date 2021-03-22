@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   logoWrapper: {
     display: "flex",
     justifyContent: "center",
-    width: 100,
+    width: 220,
   },
   fullMenuWrapper: {
     display: "flex",

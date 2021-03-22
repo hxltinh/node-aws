@@ -4,10 +4,16 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '80px',
+    width: 'auto',
+  },
+  logo: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    fontSize: '1.3rem',
   },
   img: {
-    width: '100%',
+    width: '80px',
   }
 }));
 
@@ -16,11 +22,12 @@ export const Logo = () => {
 
   return (
     <div className={classes.root}>
-      <Link href="http://diamondrice.vn">
+      <Link href="http://diamondrice.vn" className={classes.logo}>
         <img className={classes.img}
           src="https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice_logo.png"
           alt="logo"
         />
+        <div>DiamonRice</div>
       </Link>
     </div>
   );
