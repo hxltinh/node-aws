@@ -8,7 +8,6 @@ const useStyles = makeStyles({
     position: 'relative',
     height: 'auto',
     overflow: 'hidden',
-    maxWidth: 1400,
     width: '100%',
   },
   img: {
@@ -45,7 +44,7 @@ export const ImagesSlider = (props) => {
 
   return (
     <div className={style.page}>
-      <img className={style.img} src="https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/image-2.jpg" />
+      <Paper><img className={style.img} src="https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/image-2.jpg" /></Paper>
       <div className={style.content} ><p>We give "Diamond Grade" <br/> commitment of quality</p></div>
     </div>
     // <Carousel>

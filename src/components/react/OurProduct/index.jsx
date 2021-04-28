@@ -58,15 +58,15 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export const OurProduct = () => {
-  const [products, setProducts] = useState([]);
+  const [productLines, setProductLines] = useState([]);
   const style = useStyles();
 
   useEffect(() => {
-    fetch("/api/products", {
+    fetch("/api/productLines", {
       method: "POST",
     })
       .then((res) => res.json())
-      .then((result) => setProducts(result));
+      .then((result) => setProductLines(result));
   }, []);
 
   return (
@@ -84,7 +84,7 @@ export const OurProduct = () => {
           </div>
         </div>
         <div>
-          <ProductsList products={products} />
+          <ProductsList products={productLines} />
         </div>
       </Grid>
     </div>

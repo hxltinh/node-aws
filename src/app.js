@@ -3,7 +3,7 @@ import compression from "compression";
 import index from "./routes/index";
 import path from "path";
 
-import { products } from "./data";
+import { products, productLines } from "./data";
 const app = express();
 
 // View engine setup
@@ -14,6 +14,9 @@ app.set("view engine", "ejs");
 app.use(compression());
 console.log(__dirname);
 app.use(express.static(__dirname + "/public"));
+
+app.use(express.json());
+
 
 // if (process.env.NODE_ENV === "development") {
 //   app.use(function (req, res, next) {
@@ -26,8 +29,29 @@ app.use(express.static(__dirname + "/public"));
 //   });
 // }
 
-app.post("/api/products", (req, res) => {
-  return res.send(products);
+app.post("/api/productLines", (req, res) => {
+  return res.send(productLines);
+});
+
+app.get("/api/productLines/:id", ({params: {id: productLineId}}, res) => {
+  const productLine = productLines.find(i => i.id = productLineId);
+
+  const productList = products.filter(i => i.productLineId = productLineId);
+
+  if (productLine) {
+    return res.send({
+      productLine: {
+        ...productLine,
+        productList,
+      }
+    });
+  }
+
+  return res.status(400).send({error: 'could not find product lines'})
+});
+
+app.post("api/products/:id", (req, res) => {
+
 });
 
 //Routes
