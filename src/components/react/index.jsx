@@ -1,4 +1,5 @@
 import React from "react";
+import { makeStyles } from "@material-ui/core";
 import { BrowserRouter, Route, Redirect } from "react-router-dom";
 
 import { TopMenu } from "./TopMenu";
@@ -6,10 +7,20 @@ import { Main } from "./Main";
 import { Facilities } from "./Facilities";
 import { ProductItem } from "./OurProduct/product-item";
 import { IntroPage } from "./Introduction/intro-page";
+import { Footer } from "./Footer";
 
-class Index extends React.Component {
-  render() {
-    return (
+const useStyle = makeStyles({
+  mainTree: {
+    maxWidth: 1400,
+    margin: "0 auto",
+  },
+});
+
+export const Index = () => {
+  const style = useStyle();
+
+  return (
+    <div class={style.mainTree}>
       <BrowserRouter>
         <TopMenu />
         <Route path="/main">
@@ -32,7 +43,8 @@ class Index extends React.Component {
           <IntroPage />
         </Route>
       </BrowserRouter>
-    );
-  }
+      <Footer />
+    </div>
+  );
 }
-export default Index;
+
