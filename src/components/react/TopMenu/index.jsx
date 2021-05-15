@@ -88,29 +88,6 @@ export const TopMenu = () => {
           </div>
         </div>
       </div>
-
-      {/* <Hidden xsUp>
-        <Grid item xs={12}>
-          <Button
-            aria-controls="simple-menu"
-            aria-haspopup="true"
-            onClick={handleClick}
-          >
-            Open Menu
-          </Button>
-          <Menu
-            id="simple-menu"
-            anchorEl={anchorEl}
-            keepMounted
-            open={Boolean(anchorEl)}
-            onClose={handleClose}
-          >
-            <MenuItem onClick={handleClose}>Introduction</MenuItem>
-            <MenuItem onClick={handleClose}>My Products</MenuItem>
-            <MenuItem onClick={handleClose}>Facilities</MenuItem>
-          </Menu>
-        </Grid>
-      </Hidden> */}
     </div>
   );
 };
