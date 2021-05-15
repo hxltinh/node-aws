@@ -63,7 +63,7 @@ export const OurProduct = () => {
 
   useEffect(() => {
     fetch("/api/productLines", {
-      method: "POST",
+      method: "GET",
     })
       .then((res) => res.json())
       .then((result) => setProductLines(result));
