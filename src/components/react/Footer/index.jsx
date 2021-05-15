@@ -45,20 +45,20 @@ const useStyles = makeStyles({
 export const Footer = () => {
   const style = useStyles();
   return (
-    <div class={style.root}>
-      <div class={style.line}></div>
-      <div class={style.content}>
-        <div class={style.info}>
-          <div class={style.infoItem}>
-            <span class={style.icon}><LocalPhone /></span>
+    <div className={style.root}>
+      <div className={style.line}></div>
+      <div className={style.content}>
+        <div className={style.info}>
+          <div className={style.infoItem}>
+            <span className={style.icon}><LocalPhone /></span>
             <span>(+84) 0932805342</span>
           </div>
-          <div class={style.infoItem}>
-          <span class={style.icon}><Email /></span>
+          <div className={style.infoItem}>
+          <span className={style.icon}><Email /></span>
             <span>jennifer@diamondrice.vn</span>
           </div>
-          <div class={style.infoItem}>
-          <span class={style.icon}><PinDrop /></span>
+          <div className={style.infoItem}>
+          <span className={style.icon}><PinDrop /></span>
             <span>Nguyễn Văn Nguyễn, Ho Chi Minh city, Viet Nam</span>
           </div>
         </div>

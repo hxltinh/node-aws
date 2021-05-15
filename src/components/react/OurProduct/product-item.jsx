@@ -24,7 +24,6 @@ const useStyles = makeStyles((theme) => ({
   },
   gridList: {
     flexWrap: "nowrap",
-    // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
     transform: "translateZ(0)",
   },
   title: {
@@ -75,8 +74,6 @@ const ProductItemMainInfo = ({ productLine, productList }) => {
       content: "we provide the best quality product with a fair price",
     });
   }, []);
-
-  // const viewItem = selectedItem ||
 
   if (!selectedItem) {
     return <></>;

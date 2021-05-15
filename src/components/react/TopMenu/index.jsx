@@ -79,7 +79,7 @@ export const TopMenu = () => {
             <Link to="/introduction" className={classes.linkItem}>
               Introduction
             </Link>
-            <Link to="/our-products" className={classes.linkItem}>
+            <Link to="/products" className={classes.linkItem}>
               Our Products
             </Link>
             <Link to="/facilities" className={classes.linkItem}>

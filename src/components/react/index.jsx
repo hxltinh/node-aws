@@ -8,6 +8,7 @@ import { Facilities } from "./Facilities";
 import { ProductItem } from "./OurProduct/product-item";
 import { IntroPage } from "./Introduction/intro-page";
 import { Footer } from "./Footer";
+import { ProductIntro } from "./OurProduct/product-intro";
 
 const useStyle = makeStyles({
   mainTree: {
@@ -20,7 +21,7 @@ export const Index = () => {
   const style = useStyle();
 
   return (
-    <div class={style.mainTree}>
+    <div className={style.mainTree}>
       <BrowserRouter>
         <TopMenu />
         <Route path="/main">
@@ -33,6 +34,10 @@ export const Index = () => {
 
         <Route path="/" exact={true}>
           <Redirect to={{ pathname: "/main" }} />
+        </Route>
+
+        <Route path="/products">
+          <ProductIntro />
         </Route>
 
         <Route path="/product/:id">
