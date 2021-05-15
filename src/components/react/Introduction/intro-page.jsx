@@ -12,7 +12,7 @@ export const IntroPage = () => {
     const styles = useStyles();
 
     return (
-        <div class={styles.root}>
+        <div className={styles.root}>
             <ContentTitle>About Us</ContentTitle>
             <div><p>we offer the best quality product with fair price</p></div>
             <div>
