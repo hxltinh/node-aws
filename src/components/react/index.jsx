@@ -19,6 +19,7 @@ const useStyle = makeStyles({
     justifyContent: 'space-between',
   },
   main: {
+    width: '100%',
     maxWidth: 1400,
     margin: "0 auto",
   }
@@ -30,6 +31,7 @@ export const Index = () => {
   return (
     <div className={styles.mainTree}>
       <main className={styles.main}>
+        <div></div>
         <BrowserRouter>
           <TopMenu />
           <Route path="/main">
