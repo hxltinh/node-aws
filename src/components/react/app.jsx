@@ -12,22 +12,24 @@ import { Footer } from "./Footer";
 
 const useStyle = makeStyles({
   mainTree: {
-    maxWidth: 1400,
-    margin: "0 auto",
     display: "flex",
     flexDirection: "column",
     alignItems: "stretch",
     height: "100%",
     justifyContent: "space-between",
   },
+  main: {
+    maxWidth: 1400,
+    margin: "0 auto",
+  }
 });
 
 export const App = () => {
-  const style = useStyle();
+  const styles = useStyle();
 
   return (
-    <div className={style.mainTree}>
-      <main>
+    <div className={styles.mainTree}>
+      <main className={styles.main}>
         <TopMenu />
         <Route path="/main">
           <Main />

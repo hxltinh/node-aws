@@ -12,23 +12,24 @@ import { ProductIntro } from "./OurProduct/product-intro";
 
 const useStyle = makeStyles({
   mainTree: {
-    maxWidth: 1400,
-    margin: "0 auto",
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'stretch',
     height: '100%',
     justifyContent: 'space-between',
   },
-
+  main: {
+    maxWidth: 1400,
+    margin: "0 auto",
+  }
 });
 
 export const Index = () => {
-  const style = useStyle();
+  const styles = useStyle();
 
   return (
-    <div className={style.mainTree}>
-      <main>
+    <div className={styles.mainTree}>
+      <main className={styles.main}>
         <BrowserRouter>
           <TopMenu />
           <Route path="/main">
