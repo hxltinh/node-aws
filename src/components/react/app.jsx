@@ -22,6 +22,11 @@ const useStyle = makeStyles({
     width: '100%',
     maxWidth: 1400,
     margin: "0 auto",
+  },
+  menu: {
+    width: '100%',
+    maxWidth: 1000,
+    margin: '0 auto',
   }
 });
 
@@ -31,7 +36,9 @@ export const App = () => {
   return (
     <div className={styles.mainTree}>
       <main className={styles.main}>
-        <TopMenu />
+        <div className={styles.menu}>
+          <TopMenu />
+        </div>
         <Route path="/main">
           <Main />
         </Route>

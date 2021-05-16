@@ -10,6 +10,7 @@ import {
   Button,
   CardMedia,
   Grid,
+  Link,
 } from "@material-ui/core";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
 
@@ -77,7 +78,7 @@ const ProductLines = ({ items }) =>
             title={item.title}
           />
           <CardActions>
-            <Button size="small">Learn More</Button>
+            <Link href={`/product/${item.id}`}>Learn More</Link>
           </CardActions>
         </Card>
       </Grid>

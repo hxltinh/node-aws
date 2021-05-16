@@ -31,7 +31,6 @@ export const Index = () => {
   return (
     <div className={styles.mainTree}>
       <main className={styles.main}>
-        <div></div>
         <BrowserRouter>
           <TopMenu />
           <Route path="/main">

@@ -5,10 +5,9 @@ import { Logo } from "./logo";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrbow: 1,
     marginBottom: 5,
-    display: 'flex',
-    justifyContent: 'center',
+    display: "flex",
+    justifyContent: "center",
   },
   paper: {
     padding: theme.spacing(1),
@@ -53,16 +52,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export const TopMenu = () => {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
   const classes = useStyles();
 
   return (
