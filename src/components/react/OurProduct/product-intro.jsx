@@ -67,14 +67,14 @@ const ProductLines = ({ items }) =>
       <Grid item xs={3}>
         <Card className={classes.item}>
           <CardContent>
-            <Typography>
+            <Typography variant="body2" >
               {item.title}
             </Typography>
           </CardContent>
           <CardMedia
             className={classes.media}
             image={item.imageUrl}
-            title="Paella dish"
+            title={item.title}
           />
           <CardActions>
             <Button size="small">Learn More</Button>

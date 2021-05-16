@@ -51,15 +51,15 @@ export const Footer = () => {
         <div className={style.info}>
           <div className={style.infoItem}>
             <span className={style.icon}><LocalPhone /></span>
-            <span>(+84) 0932805342</span>
+            <span>(+84) 909060480</span>
           </div>
           <div className={style.infoItem}>
           <span className={style.icon}><Email /></span>
-            <span>jennifer@diamondrice.vn</span>
+            <span>sales@diamondrice.vn</span>
           </div>
           <div className={style.infoItem}>
           <span className={style.icon}><PinDrop /></span>
-            <span>Nguyễn Văn Nguyễn, Ho Chi Minh city, Viet Nam</span>
+            <span>212/321/19 Nguyễn Văn Nguyễn, District 1, Ho Chi Minh city, Viet Nam</span>
           </div>
         </div>
       </div>

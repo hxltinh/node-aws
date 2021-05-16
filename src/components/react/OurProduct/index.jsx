@@ -54,6 +54,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "rgb(255, 255, 255, 0.5)",
     textAlign: "center",
     color: "#000000",
+    fontSize: 11,
   },
 }));
 

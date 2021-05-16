@@ -14,7 +14,13 @@ const useStyle = makeStyles({
   mainTree: {
     maxWidth: 1400,
     margin: "0 auto",
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'stretch',
+    height: '100%',
+    justifyContent: 'space-between',
   },
+
 });
 
 export const Index = () => {
@@ -22,34 +28,37 @@ export const Index = () => {
 
   return (
     <div className={style.mainTree}>
-      <BrowserRouter>
-        <TopMenu />
-        <Route path="/main">
-          <Main />
-        </Route>
+      <main>
+        <BrowserRouter>
+          <TopMenu />
+          <Route path="/main">
+            <Main />
+          </Route>
 
-        <Route path="/facilities">
-          <Facilities />
-        </Route>
+          <Route path="/facilities">
+            <Facilities />
+          </Route>
 
-        <Route path="/" exact={true}>
-          <Redirect to={{ pathname: "/main" }} />
-        </Route>
+          <Route path="/" exact={true}>
+            <Redirect to={{ pathname: "/main" }} />
+          </Route>
 
-        <Route path="/products">
-          <ProductIntro />
-        </Route>
+          <Route path="/products">
+            <ProductIntro />
+          </Route>
 
-        <Route path="/product/:id">
-          <ProductItem />
-        </Route>
+          <Route path="/product/:id">
+            <ProductItem />
+          </Route>
 
-        <Route path="/introduction">
-          <IntroPage />
-        </Route>
-      </BrowserRouter>
-      <Footer />
+          <Route path="/introduction">
+            <IntroPage />
+          </Route>
+        </BrowserRouter>
+      </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
-}
-
+};

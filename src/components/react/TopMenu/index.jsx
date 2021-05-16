@@ -5,8 +5,8 @@ import { Logo } from "./logo";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
-    margin: "15px 0 5px 0",
+    flexGrbow: 1,
+    marginBottom: 5,
     display: 'flex',
     justifyContent: 'center',
   },

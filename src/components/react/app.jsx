@@ -8,11 +8,17 @@ import { Facilities } from "./Facilities";
 import { IntroPage } from "./Introduction/intro-page";
 import { ProductIntro } from "./OurProduct/product-intro";
 import { ProductItem } from "./OurProduct/product-item";
+import { Footer } from "./Footer";
 
 const useStyle = makeStyles({
   mainTree: {
     maxWidth: 1400,
     margin: "0 auto",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "stretch",
+    height: "100%",
+    justifyContent: "space-between",
   },
 });
 
@@ -21,8 +27,9 @@ export const App = () => {
 
   return (
     <div className={style.mainTree}>
-      <TopMenu />
-      <Route path="/main">
+      <main>
+        <TopMenu />
+        <Route path="/main">
           <Main />
         </Route>
 
@@ -45,6 +52,10 @@ export const App = () => {
         <Route path="/introduction">
           <IntroPage />
         </Route>
+      </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 };

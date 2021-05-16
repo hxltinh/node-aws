@@ -6,6 +6,9 @@ const useStyles = makeStyles((theme) => ({
     root: {
       fontSize: 20,
     },
+    img: {
+        width: '100%',
+    }
   }));
 
 export const IntroPage = () => {
@@ -16,7 +19,7 @@ export const IntroPage = () => {
             <ContentTitle>About Us</ContentTitle>
             <div><p>we offer the best quality product with fair price</p></div>
             <div>
-                <img src="https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-factory.jpg" />
+                <img className={styles.img} src="https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-factory.jpg" />
             </div>
         </div>
     );
