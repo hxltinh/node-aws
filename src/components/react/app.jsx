@@ -19,6 +19,7 @@ const useStyle = makeStyles({
     justifyContent: "space-between",
   },
   main: {
+    width: '100%',
     maxWidth: 1400,
     margin: "0 auto",
   }
