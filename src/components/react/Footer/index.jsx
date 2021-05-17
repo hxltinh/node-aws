@@ -7,6 +7,7 @@ const useStyles = makeStyles({
   root: {
     display: "flex",
     flexDirection: "column",
+    marginTop: 30,
   },
   line: {
     backgroundColor: "rgb(51, 153, 255)",

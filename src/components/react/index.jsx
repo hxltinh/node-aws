@@ -12,16 +12,21 @@ import { ProductIntro } from "./OurProduct/product-intro";
 
 const useStyle = makeStyles({
   mainTree: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'stretch',
-    height: '100%',
-    justifyContent: 'space-between',
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "stretch",
+    height: "100%",
+    justifyContent: "space-between",
   },
   main: {
-    width: '100%',
+    width: "100%",
     maxWidth: 1400,
     margin: "0 auto",
+  },
+  menu: {
+    width: '100%',
+    maxWidth: 1000,
+    margin: '0 auto',
   }
 });
 
@@ -32,7 +37,9 @@ export const Index = () => {
     <div className={styles.mainTree}>
       <main className={styles.main}>
         <BrowserRouter>
-          <TopMenu />
+          <div className={styles.menu}>
+            <TopMenu />
+          </div>
           <Route path="/main">
             <Main />
           </Route>

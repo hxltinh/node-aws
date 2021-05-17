@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { makeStyles } from "@material-ui/styles";
 import {
-  GridList,
-  GridListTile,
-  GridListTileBar,
-  IconButton,
+  CardContent,
+  Typography,
+  CardMedia,
+  Grid,
   CircularProgress,
   Card,
   CardActionArea,
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     minHeight: 320,
   },
   mainImage: {
-    height: 'auto',
+    height: "auto",
   },
   gridList: {
     flexWrap: "nowrap",
@@ -55,9 +55,11 @@ export const ProductItem = () => {
       });
   }, []);
 
-  if (!productLine) {
+  if (!productLine || productList.length === 0) {
     return <CircularProgress />;
   }
+
+
 
   return (
     <ProductItemMainInfo productLine={productLine} productList={productList} />
@@ -70,10 +72,12 @@ const ProductItemMainInfo = ({ productLine, productList }) => {
   const [selectedItem, setSelectedItem] = useState(undefined);
 
   useEffect(() => {
-    setSelectedItem({
-      imageUrl: productLine.imageUrl,
-      content: "we provide the best quality product with a fair price",
-    });
+    if (productList.length > 0) {
+      setSelectedItem({
+        imageUrl: productList[0].imageUrl,
+        content: productList[0].content,
+      });
+    }
   }, []);
 
   if (!selectedItem) {
@@ -82,7 +86,7 @@ const ProductItemMainInfo = ({ productLine, productList }) => {
 
   const imageClick = (item) => {
     setSelectedItem(item);
-  }
+  };
 
   return (
     <div className="gb-padding">
@@ -92,31 +96,21 @@ const ProductItemMainInfo = ({ productLine, productList }) => {
           <img src={selectedItem.imageUrl} />
         </div>
       </div>
-      <GridList className={style.gridList} cols={2.5}>
-        {productList &&
-          productList.map((i) => (
-            <GridListTile key={i.id}>
-              <Card>
-                <CardActionArea onClick={() => imageClick(i)}>
-                <img src={i.imageUrl} />
-                </CardActionArea>
-                <GridListTileBar
-                  title={i.title}
-                  classes={{
-                    root: style.titleBar,
-                    title: style.title,
-                  }}
-                  actionIcon={
-                    <IconButton aria-label={`star ${i.title}`}>
-                      <StarBorderIcon className={style.title} />
-                    </IconButton>
-                  }
-                />
-                
-              </Card>
-            </GridListTile>
-          ))}
-      </GridList>
+      <Grid container spacing={3}>
+        {productList && productList.map((i) => <Item item={i} imageClick={imageClick} />)}
+      </Grid>
     </div>
   );
 };
+
+const Item = ({ item, imageClick }) =>(<Grid item xs={3}>
+  <Card>
+    <CardContent>
+      <Typography variant="body2">{item.title}</Typography>
+    </CardContent>
+    <CardMedia image={item.imageUrl} title={item.title} />
+    <CardActionArea onClick={() => imageClick(item)}>
+      <img src={item.imageUrl} />
+    </CardActionArea>
+  </Card>
+</Grid>);
