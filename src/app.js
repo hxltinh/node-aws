@@ -34,9 +34,9 @@ app.get("/api/productLines", (req, res) => {
 });
 
 app.get("/api/productLines/:id", ({params: {id: productLineId}}, res) => {
-  const productLine = productLines.find(i => i.id = productLineId);
+  const productLine = productLines.find(i => i.id === productLineId);
 
-  const productList = products.filter(i => i.productLineId = productLineId);
+  const productList = products.filter(i => i.productLineId === productLineId);
 
   if (productLine) {
     return res.send({

@@ -7,7 +7,6 @@ import {
   CardContent,
   CardActions,
   Typography,
-  Button,
   CardMedia,
   Grid,
   Link,
@@ -15,9 +14,9 @@ import {
 import StarBorderIcon from "@material-ui/icons/StarBorder";
 
 const useStyles = makeStyles({
-    item: {
-        padding: '0 10px', 
-    },
+  item: {
+    padding: "0 10px",
+  },
   bullet: {
     display: "inline-block",
     margin: "0 2px",
@@ -68,9 +67,7 @@ const ProductLines = ({ items }) =>
       <Grid item xs={3}>
         <Card className={classes.item}>
           <CardContent>
-            <Typography variant="body2" >
-              {item.title}
-            </Typography>
+            <Typography variant="body2">{item.title}</Typography>
           </CardContent>
           <CardMedia
             className={classes.media}
