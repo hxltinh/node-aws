@@ -110,4 +110,36 @@ export const products = [
     productLineId: "rice-noodle",
     content: "Rice Noodle Vermicelli",
   },
+  {
+    id: "rice-paper-round-6-inches",
+    title: "Rice paper round 6 inches",
+    imageUrl:
+      "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-paper-round-6-inches.jpg",
+    productLineId: "rice-paper",
+    content: "Rice paper round 6 inches",
+  },
+  {
+    id: "rice-paper-round-sizes",
+    title: "Rice paper round multi sizes",
+    imageUrl:
+      "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-paper-round-sizes.jpg",
+    productLineId: "rice-paper",
+    content: "Rice paper round multi sizes",
+  },
+  {
+    id: "rice-paper-round",
+    title: "Rice paper round",
+    imageUrl:
+      "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-paper-round.jpg",
+    productLineId: "rice-paper",
+    content: "Rice paper round",
+  },
+  {
+    id: "rice-paper-square",
+    title: "Rice paper square",
+    imageUrl:
+      "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-paper-square.jpg",
+    productLineId: "rice-paper",
+    content: "Rice paper square",
+  },
 ];
