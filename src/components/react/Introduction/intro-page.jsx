@@ -21,6 +21,13 @@ export const IntroPage = () => {
             <div>
                 <img className={styles.img} src="https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-factory.jpg" />
             </div>
+
+            <ContentTitle>Export Map</ContentTitle>
+            <div>
+                <img className={styles.img} src="https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/world_export.png" />
+            </div>
+
+            
         </div>
     );
 }

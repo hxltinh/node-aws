@@ -142,4 +142,36 @@ export const products = [
     productLineId: "rice-paper",
     content: "Rice paper square",
   },
+  {
+    id: "rice-flour-starch-flour",
+    title: "Rice flour",
+    imageUrl:
+      "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-flour-starch-flour.jpg",
+    productLineId: "rice-flour-and-starch",
+    content: "Rice flour",
+  },
+  {
+    id: "rice-flour-starch-glutinous",
+    title: "Rice flour glutinous",
+    imageUrl:
+      "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-flour-starch-glutinous.jpg",
+    productLineId: "rice-flour-and-starch",
+    content: "Rice flour glutinous",
+  },
+  {
+    id: "rice-flour-starch-starch",
+    title: "Rice starch",
+    imageUrl:
+      "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-flour-starch-starch.jpg",
+    productLineId: "rice-flour-and-starch",
+    content: "Rice starch",
+  },
+  {
+    id: "rice-flour-starch-tapioca",
+    title: "Starch tapioca",
+    imageUrl:
+      "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-flour-starch-tapioca-starch.jpg",
+    productLineId: "rice-flour-and-starch",
+    content: "Starch tapioca",
+  },
 ];
