@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { makeStyles } from "@material-ui/styles";
 import {
@@ -10,7 +10,8 @@ import {
   Card,
   CardActionArea,
 } from "@material-ui/core";
-import StarBorderIcon from "@material-ui/icons/StarBorder";
+import { SelectMenuContext } from "../TopMenu/select-menu-context-provider";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -41,6 +42,12 @@ export const ProductItem = () => {
 
   const [productLine, setProductLine] = useState(undefined);
   const [productList, setProductList] = useState([]);
+
+  const {setSelectedMenu} = useContext(SelectMenuContext);
+
+  useEffect(() => {
+    setSelectedMenu('products');
+  }, []);
 
   useEffect(() => {
     fetch(`/api/productLines/${id}`)

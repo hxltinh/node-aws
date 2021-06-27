@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useState, useContext} from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 import { Logo } from "./logo";
+import { SelectMenuContext } from "./select-menu-context-provider";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,10 +50,19 @@ const useStyles = makeStyles((theme) => ({
       color: "rgb(255, 255, 255)",
     },
   },
+  hightlight: {
+    borderBottom: '1px solid blue',
+  }
 }));
 
 export const TopMenu = () => {
   const classes = useStyles();
+
+  const {selectedMenu,setSelectedMenu} = useContext(SelectMenuContext);
+
+  const resolveHighLightClassNames = (itemNameShouldMatch) => {
+    return itemNameShouldMatch === selectedMenu ? `${classes.linkItem} ${classes.hightlight}` : classes.linkItem;
+  }
 
   return (
     <div className={classes.root}>
@@ -62,16 +72,16 @@ export const TopMenu = () => {
         </div>
         <div className={classes.linkWrapper}>
           <div className={classes.linkContainer}>
-            <Link to="/" className={classes.linkItem}>
+            <Link to="/" onClick={() => setSelectedMenu('home')} className={resolveHighLightClassNames('home')}>
               Home
             </Link>
-            <Link to="/introduction" className={classes.linkItem}>
+            <Link to="/introduction" onClick={() => setSelectedMenu('introduction')} className={resolveHighLightClassNames('introduction')}>
               Introduction
             </Link>
-            <Link to="/products" className={classes.linkItem}>
+            <Link to="/products" onClick={() => setSelectedMenu('products')} className={resolveHighLightClassNames('products')}>
               Our Products
             </Link>
-            <Link to="/facilities" className={classes.linkItem}>
+            <Link to="/facilities" onClick={() => setSelectedMenu('facilities')} className={resolveHighLightClassNames('facilities')}>
               Facilities
             </Link>
           </div>

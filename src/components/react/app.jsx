@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, createContext } from "react";
 import { makeStyles } from "@material-ui/core";
 import { Redirect, Route } from "react-router-dom";
 
@@ -9,6 +9,8 @@ import { IntroPage } from "./Introduction/intro-page";
 import { ProductIntro } from "./OurProduct/product-intro";
 import { ProductItem } from "./OurProduct/product-item";
 import { Footer } from "./Footer";
+import { CreateContextProvider } from "./TopMenu/select-menu-context-provider";
+
 
 const useStyle = makeStyles({
   mainTree: {
@@ -19,49 +21,54 @@ const useStyle = makeStyles({
     justifyContent: "space-between",
   },
   main: {
-    width: '100%',
+    width: "100%",
     maxWidth: 1400,
     margin: "0 auto",
   },
   menu: {
-    width: '100%',
+    width: "100%",
     maxWidth: 1000,
-    margin: '0 auto',
-  }
+    margin: "0 auto",
+  },
 });
+
+
 
 export const App = () => {
   const styles = useStyle();
 
+
   return (
     <div className={styles.mainTree}>
       <main className={styles.main}>
-        <div className={styles.menu}>
-          <TopMenu />
-        </div>
-        <Route path="/main">
-          <Main />
-        </Route>
+        <CreateContextProvider>
+          <div className={styles.menu}>
+            <TopMenu />
+          </div>
+          <Route path="/main">
+            <Main />
+          </Route>
 
-        <Route path="/facilities">
-          <Facilities />
-        </Route>
+          <Route path="/facilities">
+            <Facilities />
+          </Route>
 
-        <Route path="/" exact={true}>
-          <Redirect to={{ pathname: "/main" }} />
-        </Route>
+          <Route path="/" exact={true}>
+            <Redirect to={{ pathname: "/main" }} />
+          </Route>
 
-        <Route path="/products">
-          <ProductIntro />
-        </Route>
+          <Route path="/products">
+            <ProductIntro />
+          </Route>
 
-        <Route path="/product/:id">
-          <ProductItem />
-        </Route>
+          <Route path="/product/:id">
+            <ProductItem />
+          </Route>
 
-        <Route path="/introduction">
-          <IntroPage />
-        </Route>
+          <Route path="/introduction">
+            <IntroPage />
+          </Route>
+        </CreateContextProvider>
       </main>
       <footer>
         <Footer />
