@@ -51,7 +51,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   hightlight: {
-    borderBottom: '1px solid blue',
+    backgroundColor: "rgb(51, 153, 255)",
+    color: "rgb(255, 255, 255)",
   }
 }));
 
