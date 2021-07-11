@@ -1,44 +1,21 @@
-import React, { useEffect, useState, useContext } from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/styles";
 import {
+    Grid,
+    Modal,
+    Card,
     CardContent,
     Typography,
     CardMedia,
-    Grid,
-    CircularProgress,
-    Card,
     CardActionArea,
-    Modal,
 } from "@material-ui/core";
-import { SelectMenuContext } from "../TopMenu/select-menu-context-provider";
 import CloseIcon from '@material-ui/icons/Close';
 import IconButton from '@material-ui/core/IconButton';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        display: "flex",
-        flex: 1,
-        justifyContent: "space-between",
-        minHeight: 320,
-    },
-    mainImage: {
-        height: "auto",
-    },
-    gridList: {
-        flexWrap: "nowrap",
-        transform: "translateZ(0)",
-    },
-    title: {
-        color: "#ededed",
-    },
-    titleBar: {
-        fontSize: 11,
-        background:
-            "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)",
-    },
+
     modalWrapper: {
         width: "70%",
         height: "70%",
@@ -47,8 +24,8 @@ const useStyles = makeStyles((theme) => ({
         left: "15%",
         backgroundColor: "#ffffff",
         display: "flex",
-        padding: 30,
-        flexDirection: 'row',
+        padding: 10,
+        flexDirection: 'column',
         justifyContent: 'space-between',
         position: 'relative',
     },
@@ -66,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
         position: 'absolute',
         top: 0,
         height: '100%',
-        width: 50,
+        width: 48,  
         display: 'flex',
         alignItems: 'center',
     },
@@ -79,46 +56,23 @@ const useStyles = makeStyles((theme) => ({
     modalButton: {
         height: 50,
     },
+    mainImage: {
+        flex: 1,
+        '& > img': {
+            width: '100%',
+        }
+    },
+    modalTitle: {
+        height: 60,
+        padding: '20px 10px',
+        textAlign: 'center',
+        fontSize: 24,
+        color: 'rgb(51, 153, 255)',
+        textTransform: 'capitalize',
+    }
 }));
 
-export const ProductItem = () => {
-    const { id } = useParams();
-
-    const [productLine, setProductLine] = useState(undefined);
-    const [productList, setProductList] = useState([]);
-
-    const { setSelectedMenu } = useContext(SelectMenuContext);
-
-    useEffect(() => {
-        setSelectedMenu("products");
-    }, []);
-
-    useEffect(() => {
-        fetch(`/api/productLines/${id}`)
-            .then((res) => res.json())
-            .then(({ productLine: { id, imageUrl, productList } }) => {
-                setProductLine({
-                    id,
-                    imageUrl,
-                });
-
-                setProductList(productList);
-            });
-    }, []);
-
-    if (!productLine || productList.length === 0) {
-        return <CircularProgress />;
-    }
-
-    return (
-        <ProductItemMainInfo
-            productLine={productLine}
-            productList={productList}
-        />
-    );
-};
-
-const ProductItemMainInfo = ({ productLine, productList }) => {
+export const ProductItemList = ({ productList }) => {
     const style = useStyles();
 
     const [selectedItem, setSelectedItem] = useState(undefined);
@@ -176,7 +130,7 @@ const ProductItemMainInfo = ({ productLine, productList }) => {
             </Grid>
             <Modal open={openModal} onClose={handleCloseModal}>
                 <div className={style.modalWrapper}>
-                    <div>{selectedItem.content}</div>
+                    <div className={style.modalTitle}>{selectedItem.content}</div>
                     <div className={style.mainImage}>
                         <img src={selectedItem.imageUrl} />
                     </div>
@@ -195,7 +149,7 @@ const ProductItemMainInfo = ({ productLine, productList }) => {
             </Modal>
         </div>
     );
-};
+}
 
 const Item = ({ item, imageClick }) => (
     <Grid item xs={3}>

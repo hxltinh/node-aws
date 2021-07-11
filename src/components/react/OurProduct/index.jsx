@@ -39,16 +39,16 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     backgroundColor: "#ffffff",
   },
-  productItem: {
+  ProductLine: {
     position: "relative",
   },
-  productItemTitleWrapper: {
+  ProductLineTitleWrapper: {
     position: "absolute",
     bottom: 30,
     left: 0,
     right: 0,
   },
-  productItemTitle: {
+  ProductLineTitle: {
     position: "relative",
     padding: "5px 14px",
     backgroundColor: "rgb(255, 255, 255, 0.5)",
@@ -115,9 +115,9 @@ function Item({ item }) {
   const linkTo = `/product/${item.id}`;
   return (
     <Paper>
-      <Link to={linkTo} className={style.productItem}>
-        <div className={style.productItemTitleWrapper}>
-          <div className={style.productItemTitle}>{item.title}</div>
+      <Link to={linkTo} className={style.ProductLine}>
+        <div className={style.ProductLineTitleWrapper}>
+          <div className={style.ProductLineTitle}>{item.title}</div>
         </div>
         <img className={style.img} src={item.imageUrl} />
       </Link>

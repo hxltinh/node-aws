@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Redirect } from "react-router-dom";
 import { TopMenu } from "./TopMenu";
 import { Main } from "./Main";
 import { Facilities } from "./Facilities";
-import { ProductItem } from "./OurProduct/product-item";
+import { ProductLine } from "./OurProduct/product-line";
 import { IntroPage } from "./Introduction/intro-page";
 import { Footer } from "./Footer";
 import { ProductIntro } from "./OurProduct/product-intro";
@@ -58,7 +58,7 @@ export const Index = () => {
             </Route>
 
             <Route path="/product/:id">
-              <ProductItem />
+              <ProductLine />
             </Route>
 
             <Route path="/introduction">

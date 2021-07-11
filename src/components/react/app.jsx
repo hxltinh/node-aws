@@ -7,7 +7,7 @@ import { Main } from "./Main";
 import { Facilities } from "./Facilities";
 import { IntroPage } from "./Introduction/intro-page";
 import { ProductIntro } from "./OurProduct/product-intro";
-import { ProductItem } from "./OurProduct/product-item";
+import { ProductLine } from "./OurProduct/product-line";
 import { Footer } from "./Footer";
 import { CreateContextProvider } from "./TopMenu/select-menu-context-provider";
 
@@ -62,7 +62,7 @@ export const App = () => {
           </Route>
 
           <Route path="/product/:id">
-            <ProductItem />
+            <ProductLine />
           </Route>
 
           <Route path="/introduction">
