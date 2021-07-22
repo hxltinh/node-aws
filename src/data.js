@@ -34,7 +34,7 @@ export const products = [
     id: "rice-basmati",
     title: "Basmati Rice",
     imageUrl:
-      "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-basmati-rice-m.jpg",
+      "https://nguyet-public-entities.s3.ap-southeast-1.amazonaws.com/rice-normal-basmati.jpg",
     productLineId: "rice",
     content: "some product item content 1",
   },
@@ -42,7 +42,7 @@ export const products = [
     id: "rice-black-nutrition",
     title: "Black Nutrition Rice",
     imageUrl:
-      "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-black-nutrition-m.jpg",
+      "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-normal-black-nutrition.jpg",
     productLineId: "rice",
     content: "some product item content 2",
   },
@@ -50,7 +50,7 @@ export const products = [
     id: "rice-long-grain-brown-nutrition",
     title: "Long Grain Brow Nutrition Rice",
     imageUrl:
-      "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-long-grain-brown-nutrition-m.jpg",
+      "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-normal-long-grain-brown-nutrition.jpg",
     productLineId: "rice",
     content: "some product item content 3",
   },
@@ -58,9 +58,17 @@ export const products = [
     id: "rice-red-nutrition",
     title: "Red Nutrition Rice",
     imageUrl:
-      "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-red-nutrition-m.jpg",
+      "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-normal-red-nutrition.jpg",
     productLineId: "rice",
     content: "some product item content 4",
+  },
+  {
+    id: "rrice-normal-jasmine",
+    title: "Jasmine Rice",
+    imageUrl:
+      "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-normal-jasmine.jpg",
+    productLineId: "rice",
+    content: "the best taste",
   },
   {
     id: "rice-noodle-3point5",
