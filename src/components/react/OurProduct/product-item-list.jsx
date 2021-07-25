@@ -17,8 +17,8 @@ import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 const useStyles = makeStyles((theme) => ({
 
     modalWrapper: {
-        width: "70%",
-        height: "70%",
+        width: "800px",
+        height: "600px",
         position: "fixed",
         top: "15%",
         left: "15%",
@@ -151,16 +151,31 @@ export const ProductItemList = ({ productList }) => {
     );
 }
 
-const Item = ({ item, imageClick }) => (
-    <Grid item xs={3}>
-        <Card>
-            <CardContent>
-                <Typography variant="body2">{item.title}</Typography>
-            </CardContent>
-            <CardMedia image={item.imageUrl} title={item.title} />
-            <CardActionArea onClick={() => imageClick(item)}>
-                <img src={item.imageUrl} />
-            </CardActionArea>
-        </Card>
-    </Grid>
-);
+const productItemStyles = makeStyles({
+    root: {
+        height: 150,
+    },   
+    item: {
+        height: 210,
+    },
+    image: {
+        width: '100%',
+    }
+});
+
+const Item = ({ item, imageClick }) => {
+    const styles = productItemStyles();
+    return (
+        <Grid item xs={3}>
+            <Card>
+                <CardContent>
+                    <Typography variant="body2">{item.title}</Typography>
+                </CardContent>
+                <CardMedia image={item.imageUrl} title={item.title} />
+                <CardActionArea onClick={() => imageClick(item)} className={styles.item}>
+                    <img src={item.imageUrl} className={styles.image}/>
+                </CardActionArea>
+            </Card>
+        </Grid>
+    );
+};
