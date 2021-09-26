@@ -36,7 +36,7 @@ export const products = [
     imageUrl:
       "https://nguyet-public-entities.s3.ap-southeast-1.amazonaws.com/rice-normal-basmati.jpg",
     productLineId: "rice",
-    content: "some product item content 1",
+    content: "Basmati Rice",
   },
   {
     id: "rice-black-nutrition",
@@ -44,7 +44,7 @@ export const products = [
     imageUrl:
       "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-normal-black-nutrition.jpg",
     productLineId: "rice",
-    content: "some product item content 2",
+    content: "Black Nutrition Rice",
   },
   {
     id: "rice-long-grain-brown-nutrition",
@@ -52,7 +52,7 @@ export const products = [
     imageUrl:
       "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-normal-long-grain-brown-nutrition.jpg",
     productLineId: "rice",
-    content: "some product item content 3",
+    content: "Long Grain Brow Nutrition Rice",
   },
   {
     id: "rice-red-nutrition",
@@ -60,63 +60,63 @@ export const products = [
     imageUrl:
       "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-normal-red-nutrition.jpg",
     productLineId: "rice",
-    content: "some product item content 4",
+    content: "Red Nutrition Rice",
   },
   {
-    id: "rrice-normal-jasmine",
+    id: "rice-normal-jasmine",
     title: "Jasmine Rice",
     imageUrl:
       "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-normal-jasmine.jpg",
     productLineId: "rice",
-    content: "the best taste",
+    content: "Jasmine Rice",
   },
   {
-    id: "rice-noodle-3point5",
-    title: "Rice Noodle 3.5mm",
+    id: "noodle-flat-ric-2p5mm-in-square-rolls",
+    title: "Rice Noodle flat ric 2.5mm in square rolls",
     imageUrl:
-      "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-noodle-3point5.jpg",
+      "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/noodle-flat-ric-2p5mm-in-square-rolls.jpg",
     productLineId: "rice-noodle",
-    content: "Rice Noodle 3.5mm",
+    content: "Rice Noodle flat ric 2.5mm in square rolls",
   },
   {
-    id: "rice-noodle-flat-2point5",
+    id: "noodle-flat-rice-2p5mm",
     title: "Rice Noodle flat 2.5mm",
     imageUrl:
-      "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-noodle-flat-2point5.jpg",
+      "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/noodle-flat-rice-2p5mm.jpg",
     productLineId: "rice-noodle",
     content: "Rice Noodle flat 2.5mm",
   },
   {
-    id: "rice-noodle-flat",
-    title: "Rice Noodle flat",
+    id: "noodle-flat-rice-3p5mm",
+    title: "Rice Noodle Flat 3.5mm",
     imageUrl:
-      "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-noodle-flat.jpg",
+      "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/noodle-flat-rice-3p5mm.jpg",
     productLineId: "rice-noodle",
-    content: "Rice Noodle flat",
+    content: "Rice Noodle Flat 3.5mm",
   },
   {
-    id: "rice-noodle-round-3mm",
-    title: "Rice Noodle round 3mm",
+    id: "noodle-rice-vermicelli",
+    title: "Rice Noodle vermicelli",
     imageUrl:
-      "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-noodle-round-3mm.jpg",
+      "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/noodle-rice-vermicelli.jpg",
     productLineId: "rice-noodle",
-    content: "Rice Noodle round 3mm",
+    content: "Rice Noodle vermicelli",
   },
   {
-    id: "rice-noodle-round",
-    title: "Rice Noodle round",
+    id: "noodle-round-rice-3mm",
+    title: "Rice Noodle 3mm",
     imageUrl:
-      "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-noodle-round.jpg",
+      "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/noodle-round-rice-3mm.jpg",
     productLineId: "rice-noodle",
-    content: "Rice Noodle round",
+    content: "Rice Noodle 3mm",
   },
   {
-    id: "rice-noodle-vermicelli",
-    title: "Rice Noodle Vermicelli",
+    id: "noodle-round-ricenoodle-1p5mm",
+    title: "Rice Noodle Ricenoodle 1.5mm",
     imageUrl:
-      "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice-noodle-vermicelli.jpg",
+      "https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/noodle-round-ricenoodle-1p5mm.jpg",
     productLineId: "rice-noodle",
-    content: "Rice Noodle Vermicelli",
+    content: "Rice Noodle Ricenoodle 1.5mm",
   },
   {
     id: "rice-paper-round-6-inches",
