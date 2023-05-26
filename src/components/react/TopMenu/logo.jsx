@@ -27,7 +27,7 @@ export const Logo = () => {
           src="https://nguyet-public-entities.s3-ap-southeast-1.amazonaws.com/rice_logo.png"
           alt="logo"
         />
-        <div>DiamonRice</div>
+        <div>DiamondRice</div>
       </Link>
     </div>
   );
